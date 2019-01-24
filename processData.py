@@ -23,16 +23,17 @@ while(i<len(games)):
         prevMoves[(n-1)*2+1]=games[i-n][3]
         n+=1
 
-    outData.append([prevMoves,[games[i][2],games[i][3]]])
+    if(games[i][2]=="1"):
+        perfectOut=["0","1","0"]
+    if(games[i][2]=="2"):
+        perfectOut=["0","0","1"]
+    if(games[i][2]=="3"):
+        perfectOut=["1","0","0"]
+    outData.append([prevMoves+perfectOut])
     i+=1
 
 
 f= open("cleanData.csv","w")
 for row in outData:
-    string=""
-    for i in row[0] :
-        string+=str(i)+","
-    for i in row[1]:
-        string+=str(i)+","
-    string=string[:-1]
-    f.write(string+"\n")
+
+    f.write(str(row).replace("[","").replace("]","").replace("'","")+"\n")
