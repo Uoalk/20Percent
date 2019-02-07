@@ -1,11 +1,10 @@
 import csv
 
-
-games=[];
+games = []
 with open('data.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
-    i=0
+    i = 0
     for row in csv_reader:
         if(row[2]=='0' or row[3]=='0'):
             pass
@@ -14,7 +13,7 @@ with open('data.csv') as csv_file:
         #print(row)
 
 i=1
-outData=[];
+outData=[]
 while(i<len(games)):
     prevMoves=[0]*10
     n=1
@@ -36,4 +35,4 @@ while(i<len(games)):
 f= open("cleanData.csv","w")
 for row in outData:
 
-    f.write(str(row).replace("[","").replace("]","").replace("'","")+"\n")
+    f.write(str(row).replace("[","").replace("]","").replace("'","").replace(" ","")+"\n")
