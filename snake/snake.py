@@ -54,13 +54,26 @@ class Board:
             pygame.draw.rect(screen, (255,   0,   0), [tile[0]*10,tile[1]*10,10,10])
         pygame.display.flip();
 
+    def getOutput():
+        #food is -1, body is 1, head is 2
+        output=[0]*(width*height);
+
+        output[food[1]*width+food[0]]=-1#head
+
+        for tile in self.body:
+            output[tile[1]*width+tile[0]]=1
+
+        output[body[0][1]*width+body[0][0]]=2#head
+
+
+
 
 
 
 
 
 board=Board(10,10)
-
+print(board.getOutput)
 pygame.init()
 screen = pygame.display.set_mode((500,500))
 done = False
