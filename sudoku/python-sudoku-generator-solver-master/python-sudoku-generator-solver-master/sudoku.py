@@ -4,7 +4,7 @@ import time
 import copy
 import random
 
-level = "Medium"
+level = "Easy"
 
 """ [Level of Difficulty] = Input the level of difficulty of the sudoku puzzle. Difficulty levels
         include ‘Easy’ ‘Medium’ ‘Hard’ and ‘Insane’. Outputs a sudoku of desired
@@ -315,6 +315,7 @@ def main(level):
     n = 0
     if level == 'Easy':
         p = perfectSudoku()
+        printSudoku(p)
         s = puzzleGen(p)
         if s[2] != 'Easy':
             return main(level)
@@ -379,6 +380,3 @@ def main(level):
         return printSudoku(s[0])
     else:
         raise(ValueError)
-
-
-main(level)
