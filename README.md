@@ -8,7 +8,7 @@ Both of us are fairly new to Ml, AI and Neural networks, but we made a lot of go
 ### README.md
 This file ;)
 
-###-- Rock Paper Scissors--
+### -- Rock Paper Scissors -- (In main dir)
 ### cleanData.csv
 The cleaned data from [roshambo.me](https://roshambo.me/). uncleanedData.csv was run through cleanData.py to get this file.
 ### cleanData.py
@@ -28,17 +28,40 @@ The file that takes in oneHot.csv to train the neural network and outputs the sa
 ### uncleanedData.csv
 The raw data from [roshambo.me](https://roshambo.me/)
 
-###--Sudoku-- (Folder)
+### -- Sudoku -- (Folder)
 This folder also includes python-sudoku-generator-solver-master which is a git repo re modified to genrate sudoku boards. We use the sudoku.py file.
-###answer.csv
+### answer.csv
 The answers to the puzzle.csv file. in the same order as the puzzle.csv file. currenty contains ~200,000 answers. this is how the neural network checks its guessed answer.
-###puzzle.csv
+### puzzle.csv
 The puzzles that are fed into the nework
-###sudoku.h5
+### sudoku.h5
 The saved network. This one is a little beefy when loaded.
-###sudokuRestore.py
+### sudokuRestore.py
 The file to load the stored network (sudoku.h5) and test it against a known good board.
-###sudokuTrainer.py
+### sudokuTrainer.py
 The file that takes in puzzle.csv to train the network and saves it as sudoku.h5.
-###testing.csv
+### testing.csv
 A list of a few good baords that sudokuRestore.py uses to test the network
+
+
+## Installation
+One of the hardest things about this projects was finding an environment to run, test and collaborate on. While we could have use a local machine, we wanted the ability to easily work on the code at the same time. Because of this we decided to use a remote machine. While there are cheaper options, we chose to use Google Cloud VM Instances because we had a lot of credit to use the service.
+
+### Pre Requirements
+* Access to a computer and the internet
+* A google account
+* Credit to Google Cloud Services OR a linked funding source
+* Some knowledge of computers and computer science (helpful but not required)
+
+### Google Cloud VM Instances Setup
+Use [this](https://cloud.google.com/compute/docs/instances/create-start-instance)
+* for the OS choose ubuntu 14
+
+### Install Code
+Note you will most likely need to run sudo in front of any command you want to use
+* SSH in via the website or via the ssh command in terminal
+* `git clone https://github.com/getsnug/shell.git`
+
+If you want gdb
+* `sudo apt-get update`
+* `sudo apt-get install gdb`
