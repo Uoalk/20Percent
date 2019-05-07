@@ -1,24 +1,38 @@
 import csv
 
-out=[]
-
-with open('cleanData.csv') as csv_file:
+games = []
+with open('uncleanedData.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
+    line_count = 0
+    i = 0
     for row in csv_reader:
-        outLine=''
-        for item in row[:10]:
-            if item == '1':
-               outLine = outLine + "1,0,0," 
-            elif item == '2':
-               outLine = outLine + "0,1,0," 
-            elif item == '3':
-               outLine = outLine + "0,0,1," 
-            elif item == '0':
-               outLine = outLine + "0,0,0," 
-            else:
-                print("Error")
-        out.append([outLine+str(row[10])+','+str(row[11])+','+str(row[12])])
+        if(row[2]=='0' or row[3]=='0'):
+            pass
+        else:
+            games.append(row)
+        #print(row)
 
-f= open("oneHot.csv","w")
-for row in out:
+i=1
+outData=[]
+while(i<len(games)):
+    prevMoves=[0]*10
+    n=1
+    while(i-n>=1 and n<5 and games[i-n][0]==games[i][0]):
+        prevMoves[(n-1)*2]=games[i-n][2]
+        prevMoves[(n-1)*2+1]=games[i-n][3]
+        n+=1
+
+    if(games[i][2]=="1"):
+        perfectOut=["0","1","0"]
+    if(games[i][2]=="2"):
+        perfectOut=["0","0","1"]
+    if(games[i][2]=="3"):
+        perfectOut=["1","0","0"]
+    outData.append([prevMoves+perfectOut])
+    i+=1
+
+
+f= open("cleanData.csv","w")
+for row in outData:
+
     f.write(str(row).replace("[","").replace("]","").replace("'","").replace(" ","")+"\n")
