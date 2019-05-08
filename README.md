@@ -43,25 +43,22 @@ The file that takes in puzzle.csv to train the network and saves it as sudoku.h5
 ### testing.csv
 A list of a few good baords that sudokuRestore.py uses to test the network
 
-
 ## Installation
-One of the hardest things about this projects was finding an environment to run, test and collaborate on. While we could have use a local machine, we wanted the ability to easily work on the code at the same time. Because of this we decided to use a remote machine. While there are cheaper options, we chose to use Google Cloud VM Instances because we had a lot of credit to use the service.
 
 ### Pre Requirements
 * Access to a computer and the internet
-* A google account
-* Credit to Google Cloud Services OR a linked funding source
 * Some knowledge of computers and computer science (helpful but not required)
 
-### Google Cloud VM Instances Setup
-Use [this](https://cloud.google.com/compute/docs/instances/create-start-instance)
-* for the OS choose ubuntu 14
+### Install
+#### Python
+TensorFlow requries python 3.6 however, the most recent version is 3.7. Follow [this](https://realpython.com/installing-python/) and pick the most recent version fo 3.6
+#### Tensorflow
+Follow [this](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html) to insnstall TF. I know this says 3.7 but it will breaknif you have 3.7 so keep 3.6
 
-### Install Code
-Note you will most likely need to run sudo in front of any command you want to use
-* SSH in via the website or via the ssh command in terminal
-* `git clone https://github.com/getsnug/shell.git`
+### Running the program
+#### RPS
+If you just want to play the computer run restore.py (command will depend on how you installed python. it will be either `python restore.py` or just `restore.py`)
+![1](/img/1.png)
 
-If you want gdb
-* `sudo apt-get update`
-* `sudo apt-get install gdb`
+If you want to recreate it from sratch, first run `python cleanData.py` then `python oneHotData.py` then `python train.py` and then see above. You might not need `python` in front depending on your install. Also `python train.py` will probaly take a while so dont be too worried about it.
+![2](/img/2.png)
