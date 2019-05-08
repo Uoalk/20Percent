@@ -10,7 +10,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.python.saved_model import tag_constants
 
-train_dataset = [0]
+train_dataset = pd.read_csv('puzzle.csv')
 train_label = pd.read_csv('answer.csv')
 
 def build_model():
