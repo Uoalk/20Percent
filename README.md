@@ -58,7 +58,7 @@ Follow [this](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en
 ### Running the program
 #### RPS
 If you just want to play the computer run restore.py (command will depend on how you installed python. it will be either `python restore.py` or just `restore.py`)
-![](/img/1.png)
+![1](/img/1.png)
 
 If you want to recreate it from sratch, first run `python cleanData.py` then `python oneHotData.py` then `python train.py` and then see above. You might not need `python` in front depending on your install. Also `python train.py` will probaly take a while so dont be too worried about it.
-![](/img/2.png)
+![2](/img/2.png)
