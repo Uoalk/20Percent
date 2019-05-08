@@ -1,3 +1,4 @@
+#The file that cleaned the data from roshambo.me. This genrated cleanData.csv.
 #import
 import csv
 

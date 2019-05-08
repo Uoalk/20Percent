@@ -1,3 +1,4 @@
+#Takes the clean data and onehots it
 import csv
 
 out=[]#clear vars

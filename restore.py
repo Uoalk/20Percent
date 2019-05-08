@@ -1,3 +1,4 @@
+#The file to run the saved neural network (main.h5) and interface with the user.
 #imports
 import pandas as pd
 import tensorflow as tf

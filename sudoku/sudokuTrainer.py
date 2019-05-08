@@ -1,3 +1,4 @@
+#The file that takes in puzzle.csv to train the network and saves it as sudoku.h5.
 #imports
 from __future__ import absolute_import, division, print_function
 

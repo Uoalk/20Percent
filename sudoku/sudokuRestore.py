@@ -1,3 +1,4 @@
+#The file to load the stored network (sudoku.h5) and test it against a known good board.
 #imports
 import pandas as pd
 import tensorflow as tf

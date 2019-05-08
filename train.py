@@ -1,3 +1,4 @@
+#The file that takes in oneHot.csv to train the neural network and outputs the saved network to main.h5
 #imports
 from __future__ import absolute_import, division, print_function
 
