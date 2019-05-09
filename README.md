@@ -12,7 +12,7 @@ This file ;)
 ### cleanData.csv
 The cleaned data from [roshambo.me](https://roshambo.me/). uncleanedData.csv was run through cleanData.py to get this file.
 ### cleanData.py
-The file that cleaned the data from [roshambo.me](https://roshambo.me/).  This genrated cleanData.csv. 
+The file that cleaned the data from [roshambo.me](https://roshambo.me/).  This genrated cleanData.csv.
 ### main.h5
 The saved neural network model from main.py that is loaded by restore.py
 ### oneHot.csv
@@ -57,15 +57,15 @@ Follow [this](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en
 
 ### Running the program
 #### RPS
-If you just want to play the computer run restore.py (command will depend on how you installed python. it will be either `python restore.py` or just `restore.py`)
+If you just want to play the computer run restore.py (command will depend on how you installed python. It will be either `python restore.py` or just `restore.py`)
 ![1](/img/1.png)
 
-If you want to recreate it from scratch, first run `python cleanData.py` then `python oneHotData.py` then `python train.py` and then see above. You might not need `python` in front depending on your install. Also `python train.py` will probably take a while so dont be too worried about it.
+If you want to recreate it from scratch, first run `python cleanData.py` then `python oneHotData.py` then `python train.py` and then see above. You might not need `python` in front depending on your install. Also `python train.py` will probably take a while so don't be too worried about it.
 ![2](/img/2.png)
 
 #### Sudoku
 If you just want to see what we have done run sudokuRestore.py (command will depend on how you installed python. it will be either `python sudokuRestore.py` or just `sudokuRestore.py`) the top is the neural networks guess and the bottom is the real answer.
 ![3](/img/3.png)
 
-If you want to recreate it from scratch, first run `python sudokuTrainer.py`or just `sudokuTrainer.py` and then see above. This programs auto saves every 10 minutes so don't be afraid to quit the program and come back to it. you can also run udokuRestore.py while this is running to see if improvements are happening!
+If you want to recreate it from scratch, first run `python sudokuTrainer.py`or just `sudokuTrainer.py` and then see above. This programs auto saves every 10 minutes so don't be afraid to quit the program and come back to it. you can also run sudokuRestore.py while this is running to see if improvements are happening!
 ![4](/img/4.png)

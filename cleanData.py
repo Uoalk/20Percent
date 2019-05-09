@@ -1,4 +1,4 @@
-#The file that cleaned the data from roshambo.me. This genrated cleanData.csv.
+#The file that cleaned the data from roshambo.me. This generates cleanData.csv.
 #import
 import csv
 
@@ -8,7 +8,7 @@ with open('uncleanedData.csv') as csv_file:
     line_count = 0
     i = 0#clear vars
     for row in csv_reader:
-        if(row[2]=='0' or row[3]=='0'):#if one player timed out dont add data  
+        if(row[2]=='0' or row[3]=='0'):#if one player timed out dont add data
             pass
         else:#if both players played add the data
             games.append(row)

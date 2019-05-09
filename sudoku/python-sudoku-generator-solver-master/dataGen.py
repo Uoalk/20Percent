@@ -1,5 +1,7 @@
+#This file generates sudoku puzzles and saves them into a file along with their corresponding solution
 import sudoku, time, csv, os
 
+#create one sudoku board and its corresponding solution
 def dataGen():
     p = sudoku.perfectSudoku()
     solved=getBoardData(p)
@@ -9,7 +11,7 @@ def dataGen():
     return [solved,unsolved]
 
 
-
+#Serialize a sudoku board into an array of 81 numbers
 def getBoardData(sudoku):
     '''Serializes a sudoku board'''
     row = []
@@ -19,6 +21,7 @@ def getBoardData(sudoku):
 
     return(row)
 
+#write n new sudoku boards to the data files
 def writeLines(n):
     puzzle= open("puzzle.csv",'a')
     answer= open("answer.csv",'a')
